@@ -57,7 +57,7 @@ def extract_text_from_pdf(file_path):
 
 
 def build_quiz_html(questions_json):
-    quiz_html = ""
+    quiz_html = '<form id="quiz-form">\n'
     for idx, question in enumerate(questions_json.get("questions", []), start=1):
         html_question = f'''
 <div class="quiz-box" id="quiz-{idx}">
@@ -72,12 +72,18 @@ def build_quiz_html(questions_json):
 '''
         html_question += f'''
   </div>
-  <button class="check-btn" onclick="checkAnswer({idx})">Check Answer</button>
   <span id="correct-answer-{idx}" style="display:none;">{question["correctAnswer"]}</span>
- <div class="explanation" id="explanation-{idx}" data-rationale="{question["explanation"]}" style="display:none;"></div>
+  <div class="explanation" id="explanation-{idx}" data-rationale="{question["explanation"]}" style="display:none;"></div>
 </div>
 '''
         quiz_html += html_question
+    quiz_html += '''
+  <div class="text-center mt-4">
+    <button type="button" class="btn btn-success" onclick="gradeQuiz()">Submit Quiz</button>
+    <div class="mt-3 fw-bold" id="score-output"></div>
+  </div>
+</form>
+'''
     return quiz_html
 
 
