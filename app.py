@@ -58,6 +58,7 @@ def extract_text_from_pdf(file_path):
 
 def build_quiz_html(questions_json):
     quiz_html = '<form id="quiz-form">\n'
+    
     for idx, question in enumerate(questions_json.get("questions", []), start=1):
         html_question = f'''
 <div class="quiz-box" id="quiz-{idx}">
@@ -65,10 +66,10 @@ def build_quiz_html(questions_json):
   <div class="answers">
 '''
         for option in question["options"]:
+            input_id = f"q{idx}{option['label'].lower()}"
             html_question += f'''
-    <label>
-      <input type="radio" name="question-{idx}" value="{option["label"]}"> {option["label"]}. {option["text"]}
-    </label><br>
+    <input type="radio" id="{input_id}" name="question-{idx}" value="{option["label"]}">
+    <label for="{input_id}">{option["label"]}. {option["text"]}</label>
 '''
         html_question += f'''
   </div>
@@ -77,6 +78,7 @@ def build_quiz_html(questions_json):
 </div>
 '''
         quiz_html += html_question
+
     quiz_html += '''
   <div class="text-center mt-4">
     <button type="button" class="btn btn-success" onclick="gradeQuiz()">Submit Quiz</button>
@@ -85,7 +87,6 @@ def build_quiz_html(questions_json):
 </form>
 '''
     return quiz_html
-
 
 
 
@@ -132,10 +133,12 @@ Nursing Content:
     return response.choices[0].message.content
 
 
+
+
 def load_examples(file_path):
     with open(file_path, 'r') as f:
         data = json.load(f)
-    return json.dumps(data, indent=2)
+    return json.dumps(data["examples"], indent=2)
 
 
 examples_file_path = os.path.join(os.path.dirname(__file__), 'examples.json')
@@ -172,11 +175,16 @@ def index():
             except ValueError:
                 num_questions = 1
 
+
             examples_file_path = os.path.join(os.path.dirname(__file__), 'examples.json')
             examples_content = load_examples(examples_file_path)
-            
+
             try:
-                raw_output = generate_nclex_questions(extracted_text, examples_content, num_questions)
+                raw_output = generate_nclex_questions(
+                    extracted_text,
+                    examples_content,
+                    num_questions
+                )
 
                 questions_json = json.loads(raw_output) 
                 quiz_html = build_quiz_html(questions_json)
@@ -191,4 +199,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(debug=True)
