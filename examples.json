@@ -1,0 +1,162 @@
+{
+    "examples": [
+      {
+        "questionID": "1",
+        "stem": "A nurse is teaching a group of young adults about safe sexual practices. Which of the following best describes sexuality as defined in nursing practice?",
+        "options": [
+          {"label": "A", "text": "A physiological response to sexual stimuli"},
+          {"label": "B", "text": "A highly personal and individually expressed phenomenon influenced by various factors"},
+          {"label": "C", "text": "A strictly biological concept related to reproductive functions"},
+          {"label": "D", "text": "A religious belief system governing sexual behaviors"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Sexuality is best described as a highly personal and individually expressed phenomenon that is influenced by social, cultural, emotional, and physical factors.",
+        "tags": ["sexuality", "teaching", "nursing"]
+      },
+      {
+        "questionID": "2",
+        "stem": "A nurse is assessing a patient with chronic obstructive pulmonary disease. Which finding should prompt immediate intervention?",
+        "options": [
+          {"label": "A", "text": "Mild wheezing on auscultation"},
+          {"label": "B", "text": "Sudden onset of cyanosis"},
+          {"label": "C", "text": "Intermittent coughing"},
+          {"label": "D", "text": "Normal oxygen saturation"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Sudden onset of cyanosis indicates a significant drop in oxygenation that requires immediate intervention.",
+        "tags": ["COPD", "assessment", "nursing"]
+      },
+      {
+        "questionID": "3",
+        "stem": "A nurse is caring for a patient post-thyroidectomy. Which finding should the nurse report immediately?",
+        "options": [
+          {"label": "A", "text": "Complaints of sore throat"},
+          {"label": "B", "text": "Hoarseness of voice"},
+          {"label": "C", "text": "Positive Chvostek's sign"},
+          {"label": "D", "text": "Mild neck discomfort"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "A positive Chvostek's sign suggests hypocalcemia, a serious complication after thyroid surgery due to potential parathyroid damage.",
+        "tags": ["thyroidectomy", "postoperative", "assessment"]
+      },
+      {
+        "questionID": "4",
+        "stem": "A nurse is developing a care plan for a client newly diagnosed with major depressive disorder. Which of the following goals is most appropriate in the initial phase of treatment?",
+        "options": [
+          {"label": "A", "text": "The client will verbalize three positive self-statements."},
+          {"label": "B", "text": "The client will identify personal strengths."},
+          {"label": "C", "text": "The client will express feelings to the nurse daily."},
+          {"label": "D", "text": "The client will initiate social interactions independently."}
+        ],
+        "correctAnswer": "C",
+        "explanation": "In the initial phase, encouraging expression of feelings helps establish trust and assessment of suicidal ideation.",
+        "tags": ["mental health", "depression", "nursing care plan"]
+      },
+      {
+        "questionID": "5",
+        "stem": "A nurse is caring for a patient who just had a cardiac catheterization via the right femoral artery. Which action takes priority?",
+        "options": [
+          {"label": "A", "text": "Monitor urinary output."},
+          {"label": "B", "text": "Check pedal pulses on both legs."},
+          {"label": "C", "text": "Encourage fluid intake."},
+          {"label": "D", "text": "Elevate the head of the bed 45 degrees."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Checking pedal pulses assesses circulation distal to the catheter insertion site, which is a priority after femoral access.",
+        "tags": ["cardiac catheterization", "post-procedure", "nursing assessment"]
+      },
+      {
+        "questionID": "6",
+        "stem": "A client with a history of type 1 diabetes presents to the ER with fruity breath, Kussmaul respirations, and confusion. What is the priority nursing action?",
+        "options": [
+          {"label": "A", "text": "Administer regular insulin IV"},
+          {"label": "B", "text": "Start an oral hypoglycemic"},
+          {"label": "C", "text": "Encourage oral fluids"},
+          {"label": "D", "text": "Provide a carbohydrate snack"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "These are signs of diabetic ketoacidosis (DKA); the priority is insulin administration to reduce blood glucose and stop ketone production.",
+        "tags": ["DKA", "diabetes", "emergency care"]
+      },
+      {
+        "questionID": "7",
+        "stem": "A nurse is preparing to administer digoxin to a client with heart failure. Which assessment finding requires the nurse to withhold the medication?",
+        "options": [
+          {"label": "A", "text": "Heart rate of 56 bpm"},
+          {"label": "B", "text": "Potassium level of 4.0 mEq/L"},
+          {"label": "C", "text": "Respiratory rate of 18/min"},
+          {"label": "D", "text": "Blood pressure of 130/80 mm Hg"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Digoxin should be withheld if the client's pulse is below 60 bpm due to risk of bradycardia.",
+        "tags": ["digoxin", "medication administration", "cardiac"]
+      },
+      {
+        "questionID": "8",
+        "stem": "A nurse is teaching a client with iron-deficiency anemia about dietary choices. Which food should the nurse recommend to increase iron intake?",
+        "options": [
+          {"label": "A", "text": "Cottage cheese"},
+          {"label": "B", "text": "Baked chicken"},
+          {"label": "C", "text": "Broccoli"},
+          {"label": "D", "text": "Lean red meat"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Lean red meat is one of the richest sources of heme iron, which is more easily absorbed than non-heme iron found in plant sources.",
+        "tags": ["anemia", "nutrition", "client education"]
+      },
+      {
+        "questionID": "9",
+        "stem": "A nurse is caring for a client receiving a blood transfusion. Fifteen minutes after the infusion begins, the client reports chills and back pain. Which action should the nurse take first?",
+        "options": [
+          {"label": "A", "text": "Stop the transfusion immediately"},
+          {"label": "B", "text": "Call the healthcare provider"},
+          {"label": "C", "text": "Document the reaction"},
+          {"label": "D", "text": "Slow the infusion rate"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "These are signs of an acute hemolytic reaction. The first action is to stop the transfusion to prevent further reaction.",
+        "tags": ["blood transfusion", "adverse reaction", "priority"]
+      },
+      {
+        "questionID": "10",
+        "stem": "A nurse is providing discharge teaching to a client prescribed warfarin. Which statement by the client indicates a need for further teaching?",
+        "options": [
+          {"label": "A", "text": "I will use an electric razor for shaving."},
+          {"label": "B", "text": "I can take aspirin if I get a headache."},
+          {"label": "C", "text": "I will report any signs of bleeding to my provider."},
+          {"label": "D", "text": "I need to have regular blood tests to check my INR."}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Aspirin increases the risk of bleeding when taken with warfarin. The client needs further education on medication interactions.",
+        "tags": ["anticoagulants", "client education", "med safety"]
+      },
+      {
+        "questionID": "11",
+        "stem": "A nurse is assessing a newborn 1 hour after birth. Which finding should the nurse report to the provider?",
+        "options": [
+          {"label": "A", "text": "Respiratory rate of 60/min"},
+          {"label": "B", "text": "Heart rate of 140 bpm"},
+          {"label": "C", "text": "Nasal flaring and grunting"},
+          {"label": "D", "text": "Positive Moro reflex"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Nasal flaring and grunting are signs of respiratory distress in a newborn and should be reported immediately.",
+        "tags": ["newborn", "assessment", "respiratory"]
+      },
+      {
+        "questionID": "12",
+        "stem": "A nurse is reinforcing teaching with a client who has a new diagnosis of hypertension. Which of the following client statements indicates understanding of the teaching?",
+        "options": [
+          {"label": "A", "text": "I will limit my sodium intake to 4 grams per day."},
+          {"label": "B", "text": "I will check my blood pressure only when I feel dizzy."},
+          {"label": "C", "text": "I will walk at least 30 minutes most days of the week."},
+          {"label": "D", "text": "I will stop taking my medication when my blood pressure is normal."}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Regular physical activity is an effective non-pharmacological intervention for managing hypertension.",
+        "tags": ["hypertension", "client education", "lifestyle"]
+      }
+
+    ]
+  }
+  

@@ -1,0 +1,6 @@
+flask
+python-pptx
+PyPDF2
+openai
+jsonschema
+dotenv

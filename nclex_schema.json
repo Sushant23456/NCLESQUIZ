@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ATI Nursing Test Exam Question Bank Schema",
+    "description": "Schema for structuring ATI Nursing Test Exam multiple-choice questions with a specified nursing scenario prefix.",
+    "type": "object",
+    "properties": {
+      "questions": {
+        "type": "array",
+        "description": "A list of ATI exam questions.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "questionID": {"type": "string"},
+            "stem": {
+              "type": "string",
+              "description": "The question stem must begin with a nursing scenario phrase.",
+              "pattern": "^(A nurse is teaching|A nurse is assessing|A nurse is planning).*"
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "label": {"type": "string"},
+                  "text": {"type": "string"}
+                },
+                "required": ["label", "text"]
+              }
+            },
+            "correctAnswer": {"type": "string"},
+            "explanation": {"type": "string"},
+            "tags": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "required": ["stem", "options", "correctAnswer", "explanation"]
+        }
+      }
+    },
+    "required": ["questions"]
+  }
+  
