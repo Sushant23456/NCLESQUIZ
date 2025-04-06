@@ -8,7 +8,6 @@ import jsonschema
 from jsonschema import validate
 import PyPDF2
 
-
 load_dotenv()
 
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -55,22 +54,25 @@ def extract_text_from_pdf(file_path):
     return text.strip()
 
 
-
 def build_quiz_html(questions_json):
     quiz_html = '<form id="quiz-form">\n'
     
     for idx, question in enumerate(questions_json.get("questions", []), start=1):
         html_question = f'''
 <div class="quiz-box" id="quiz-{idx}">
+<div class="mt-3 fw-bold" id="score-output"></div>
   <h2>{idx}. {question["stem"]}</h2>
   <div class="answers">
 '''
+        input_type = "checkbox" if isinstance(question["correctAnswer"], list) else "radio"
         for option in question["options"]:
             input_id = f"q{idx}{option['label'].lower()}"
+            input_name = f"question-{idx}" + ("[]" if input_type == "checkbox" else "")
             html_question += f'''
-    <input type="radio" id="{input_id}" name="question-{idx}" value="{option["label"]}">
+    <input type="{input_type}" id="{input_id}" name="{input_name}" value="{option["label"]}">
     <label for="{input_id}">{option["label"]}. {option["text"]}</label>
 '''
+        
         html_question += f'''
   </div>
   <span id="correct-answer-{idx}" style="display:none;">{question["correctAnswer"]}</span>
@@ -90,24 +92,32 @@ def build_quiz_html(questions_json):
 
 
 
+def generate_nclex_questions(content, examples, num_questions, include_sata=False):
+    sata_instruction = """
+You MUST include at least 2 Select-All-That-Apply (SATA) questions. SATA questions must have exactly 5 options and use a list of letters for the correctAnswer field (e.g., ["A", "C", "E"]). Regular questions should have 4 options with a single correct answer (e.g., "B").
+""" if include_sata else """
+All questions must be single-answer multiple-choice (no SATA). Use exactly 4 options with a single correct answer (e.g., "B").
+"""
 
-def generate_nclex_questions(content, examples, num_questions):
     prompt = f"""
-You are an expert nurse educator. Based ONLY on the following nursing content, generate exactly {num_questions} NCLEX-style multiple-choice questions.
+You are an expert nurse educator. Based ONLY on the following nursing content, generate exactly {num_questions} NCLEX-style questions.
 
-Each question MUST follow this strict JSON format:
+{sata_instruction}
+
+Each question MUST follow this strict JSON format with NO duplicated options and NO repeated answer lists:
 {{
   "questionID": "string (unique ID like 101, 102...)",
-  "stem": "Clinical scenario question stem",
+  "stem": "A single clinical scenario question. Do not repeat options.",
   "options": [
     {{"label": "A", "text": "Option text"}},
     {{"label": "B", "text": "Option text"}},
     {{"label": "C", "text": "Option text"}},
-    {{"label": "D", "text": "Option text"}}
+    {{"label": "D", "text": "Option text"}}{"," if include_sata else ""}
+    {{"label": "E", "text": "Option text"}}  // Only include this for SATA questions
   ],
-  "correctAnswer": "A" | "B" | "C" | "D",
+  "correctAnswer": "A" | "B" | "C" | "D"{' OR ["A", "C", "E"]  // Only for SATA' if include_sata else ""},
   "explanation": "Brief, accurate rationale explaining why this is the correct answer.",
-  "tags": ["topic1", "topic2", ...]
+  "tags": ["topic1", "topic2"]
 }}
 
 Important instructions:
@@ -127,12 +137,10 @@ Nursing Content:
             {"role": "user", "content": prompt}
         ],
         temperature=0.5,
-        max_tokens=1800
+        max_tokens=3000
     )
 
     return response.choices[0].message.content
-
-
 
 
 def load_examples(file_path):
@@ -174,16 +182,15 @@ def index():
                 num_questions = int(request.form.get("num_questions", 1))
             except ValueError:
                 num_questions = 1
-
-
-            examples_file_path = os.path.join(os.path.dirname(__file__), 'examples.json')
-            examples_content = load_examples(examples_file_path)
+                
+            include_sata = request.form.get("include_sata") == "true"
 
             try:
                 raw_output = generate_nclex_questions(
                     extracted_text,
                     examples_content,
-                    num_questions
+                    num_questions,
+                    include_sata=include_sata
                 )
 
                 questions_json = json.loads(raw_output) 
@@ -199,4 +206,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(debug=True)
