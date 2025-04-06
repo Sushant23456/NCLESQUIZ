@@ -5,8 +5,10 @@
   <title>NCLEX Quiz Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Custom Dark Monochrome Theme -->
   <style>
     body {
       background-color: #121212;
@@ -71,9 +73,6 @@
   border-color: #fff;
 }
 
-    .answers input[type="radio"] {
-  display: none; /* Hide native radio */
-}
 
 .answers label {
   background-color: #2a2a2a;
@@ -102,15 +101,23 @@
   transition: border 0.2s ease, background-color 0.2s ease;
 }
 
-.answers input[type="radio"]:checked + label {
+.answers input[type="radio"],
+.answers input[type="checkbox"] {
+  display: none;
+}
+
+.answers input[type="radio"]:checked + label,
+.answers input[type="checkbox"]:checked + label {
   background-color: #333333;
   border-color: #888;
 }
 
-.answers input[type="radio"]:checked + label::before {
+.answers input[type="radio"]:checked + label::before,
+.answers input[type="checkbox"]:checked + label::before {
   background-color: #ffffff;
   border-color: #ffffff;
 }
+
 
 .answers label:hover {
   background-color: #3a3a3a;
@@ -198,6 +205,13 @@
           <label class="btn btn-outline-light" for="q20">20</label>
         </div>
       </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="include_sata" name="include_sata" value="true">
+        <label class="form-check-label" for="include_sata">
+          Include Select All That Apply (SATA) questions?
+        </label>
+      </div>      
       
       
       <div class="d-grid">
