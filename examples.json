@@ -2,161 +2,193 @@
     "examples": [
       {
         "questionID": "1",
-        "stem": "A nurse is teaching a group of young adults about safe sexual practices. Which of the following best describes sexuality as defined in nursing practice?",
+        "stem": "A nurse is caring for a client who states, 'I have to check with my wife and see if she thinks I am ready to go home.' The nurse replies, 'How do you feel about going home today?' Which clarifying technique is the nurse using to enhance communication with the client?",
         "options": [
-          {"label": "A", "text": "A physiological response to sexual stimuli"},
-          {"label": "B", "text": "A highly personal and individually expressed phenomenon influenced by various factors"},
-          {"label": "C", "text": "A strictly biological concept related to reproductive functions"},
-          {"label": "D", "text": "A religious belief system governing sexual behaviors"}
+          {"label": "A", "text": "Pacing"},
+          {"label": "B", "text": "Reflecting"},
+          {"label": "C", "text": "Paraphrasing"},
+          {"label": "D", "text": "Restating"}
         ],
         "correctAnswer": "B",
-        "explanation": "Sexuality is best described as a highly personal and individually expressed phenomenon that is influenced by social, cultural, emotional, and physical factors.",
-        "tags": ["sexuality", "teaching", "nursing"]
+        "explanation": "The nurse is using the therapeutic communication technique of reflecting, which involves redirecting the question back to the client so they can explore their own thoughts and feelings.",
+        "tags": ["communication", "nursing", "therapeutic techniques"]
       },
       {
         "questionID": "2",
-        "stem": "A nurse is assessing a patient with chronic obstructive pulmonary disease. Which finding should prompt immediate intervention?",
+        "stem": "Which of the following actions should the nurse take when using the communication technique of active listening? (Select all that apply)",
         "options": [
-          {"label": "A", "text": "Mild wheezing on auscultation"},
-          {"label": "B", "text": "Sudden onset of cyanosis"},
-          {"label": "C", "text": "Intermittent coughing"},
-          {"label": "D", "text": "Normal oxygen saturation"}
+          {"label": "A", "text": "Use an open posture"},
+          {"label": "B", "text": "Write down what the client says to avoid forgetting details"},
+          {"label": "C", "text": "Establish and maintain eye contact"},
+          {"label": "D", "text": "Nod in agreement with the client throughout the conversation"},
+          {"label": "E", "text": "Respond positively when giving feedback"}
         ],
-        "correctAnswer": "B",
-        "explanation": "Sudden onset of cyanosis indicates a significant drop in oxygenation that requires immediate intervention.",
-        "tags": ["COPD", "assessment", "nursing"]
+        "correctAnswer": ["A", "C", "E"],
+        "explanation": "Active listening includes using open posture, maintaining eye contact, and responding appropriately to demonstrate engagement. Writing everything down or constantly nodding may disrupt the connection.",
+        "tags": ["communication", "active listening", "therapeutic techniques"]
       },
+
       {
         "questionID": "3",
-        "stem": "A nurse is caring for a patient post-thyroidectomy. Which finding should the nurse report immediately?",
+        "stem": "A nurse is caring for a client who is concerned about his impending discharge to home with a new colostomy because he is an avid swimmer. Which of the following statements should the nurse use? (Select all that apply)",
         "options": [
-          {"label": "A", "text": "Complaints of sore throat"},
-          {"label": "B", "text": "Hoarseness of voice"},
-          {"label": "C", "text": "Positive Chvostek's sign"},
-          {"label": "D", "text": "Mild neck discomfort"}
+          {"label": "A", "text": "You will do great. You just have to get used to it."},
+          {"label": "B", "text": "What are you worried about going home?"},
+          {"label": "C", "text": "Your daily routines will be different when you go home."},
+          {"label": "D", "text": "Tell me about your support system you’ll have after you leave the hospital."},
+          {"label": "E", "text": "Let me tell you about a friend of mine with a colostomy who also enjoys swimming."}
         ],
-        "correctAnswer": "C",
-        "explanation": "A positive Chvostek's sign suggests hypocalcemia, a serious complication after thyroid surgery due to potential parathyroid damage.",
-        "tags": ["thyroidectomy", "postoperative", "assessment"]
+        "correctAnswer": ["C", "D", "E"],
+        "explanation": "The nurse should acknowledge the impact on the client’s routine, assess their support system, and offer relatable reassurance to encourage adaptation.",
+        "tags": ["therapeutic communication", "client education", "discharge planning"]
       },
+
       {
         "questionID": "4",
-        "stem": "A nurse is developing a care plan for a client newly diagnosed with major depressive disorder. Which of the following goals is most appropriate in the initial phase of treatment?",
+        "stem": "Which of the following strategies should a nurse use to establish a helping relationship with a client?",
         "options": [
-          {"label": "A", "text": "The client will verbalize three positive self-statements."},
-          {"label": "B", "text": "The client will identify personal strengths."},
-          {"label": "C", "text": "The client will express feelings to the nurse daily."},
-          {"label": "D", "text": "The client will initiate social interactions independently."}
-        ],
-        "correctAnswer": "C",
-        "explanation": "In the initial phase, encouraging expression of feelings helps establish trust and assessment of suicidal ideation.",
-        "tags": ["mental health", "depression", "nursing care plan"]
-      },
-      {
-        "questionID": "5",
-        "stem": "A nurse is caring for a patient who just had a cardiac catheterization via the right femoral artery. Which action takes priority?",
-        "options": [
-          {"label": "A", "text": "Monitor urinary output."},
-          {"label": "B", "text": "Check pedal pulses on both legs."},
-          {"label": "C", "text": "Encourage fluid intake."},
-          {"label": "D", "text": "Elevate the head of the bed 45 degrees."}
+          {"label": "A", "text": "Make sure the communication is equally reciprocal between the nurse and client"},
+          {"label": "B", "text": "Encourage client to communicate his thoughts and feelings"},
+          {"label": "C", "text": "Give nurse-client communication no time limits"},
+          {"label": "D", "text": "Allow communication to occur spontaneously throughout the nurse-client relationship"}
         ],
         "correctAnswer": "B",
-        "explanation": "Checking pedal pulses assesses circulation distal to the catheter insertion site, which is a priority after femoral access.",
-        "tags": ["cardiac catheterization", "post-procedure", "nursing assessment"]
+        "explanation": "Establishing a helping relationship involves promoting the client’s expression of thoughts and emotions in a supportive environment.",
+        "tags": ["nursing communication", "helping relationship"]
       },
-      {
+
+    {
+        "questionID": "5",
+        "stem": "A nurse is caring for a school-age child who is sitting in a chair. To facilitate effective communication, which of the following actions should the nurse take?",
+        "options": [
+            {"label": "A", "text": "Touch the child’s arm"},
+            {"label": "B", "text": "Sit at eye level"},
+            {"label": "C", "text": "Stand facing the child"},
+            {"label": "D", "text": "Stand with relaxed posture"}
+        ],
+        "correctAnswer": "B",
+        "explanation": "Sitting at eye level helps establish trust and facilitates open communication, especially with children.",
+        "tags": ["communication", "pediatrics", "nursing"]
+    },
+    {
         "questionID": "6",
-        "stem": "A client with a history of type 1 diabetes presents to the ER with fruity breath, Kussmaul respirations, and confusion. What is the priority nursing action?",
+        "stem": "A charge nurse is conducting a class on therapeutic communication to a group of newly licensed nurses. Which of the following responses by the newly licensed nurse requires additional teaching regarding nonverbal communication?",
         "options": [
-          {"label": "A", "text": "Administer regular insulin IV"},
-          {"label": "B", "text": "Start an oral hypoglycemic"},
-          {"label": "C", "text": "Encourage oral fluids"},
-          {"label": "D", "text": "Provide a carbohydrate snack"}
-        ],
-        "correctAnswer": "A",
-        "explanation": "These are signs of diabetic ketoacidosis (DKA); the priority is insulin administration to reduce blood glucose and stop ketone production.",
-        "tags": ["DKA", "diabetes", "emergency care"]
-      },
-      {
-        "questionID": "7",
-        "stem": "A nurse is preparing to administer digoxin to a client with heart failure. Which assessment finding requires the nurse to withhold the medication?",
-        "options": [
-          {"label": "A", "text": "Heart rate of 56 bpm"},
-          {"label": "B", "text": "Potassium level of 4.0 mEq/L"},
-          {"label": "C", "text": "Respiratory rate of 18/min"},
-          {"label": "D", "text": "Blood pressure of 130/80 mm Hg"}
-        ],
-        "correctAnswer": "A",
-        "explanation": "Digoxin should be withheld if the client's pulse is below 60 bpm due to risk of bradycardia.",
-        "tags": ["digoxin", "medication administration", "cardiac"]
-      },
-      {
-        "questionID": "8",
-        "stem": "A nurse is teaching a client with iron-deficiency anemia about dietary choices. Which food should the nurse recommend to increase iron intake?",
-        "options": [
-          {"label": "A", "text": "Cottage cheese"},
-          {"label": "B", "text": "Baked chicken"},
-          {"label": "C", "text": "Broccoli"},
-          {"label": "D", "text": "Lean red meat"}
+            {"label": "A", "text": "Personal space"},
+            {"label": "B", "text": "Posture"},
+            {"label": "C", "text": "Eye contact"},
+            {"label": "D", "text": "Intonation"}
         ],
         "correctAnswer": "D",
-        "explanation": "Lean red meat is one of the richest sources of heme iron, which is more easily absorbed than non-heme iron found in plant sources.",
-        "tags": ["anemia", "nutrition", "client education"]
-      },
-      {
-        "questionID": "9",
-        "stem": "A nurse is caring for a client receiving a blood transfusion. Fifteen minutes after the infusion begins, the client reports chills and back pain. Which action should the nurse take first?",
+        "explanation": "Intonation refers to the vocal pitch and is a part of verbal, not nonverbal, communication.",
+        "tags": ["nonverbal communication", "education", "nursing"]
+    },
+    {
+        "questionID": "7",
+        "stem": "A nurse is communicating with a client in an acute mental health facility. The client states, 'I can't sleep. I stay up all night.' The nurse responds, 'You are having difficulty sleeping?' Which therapeutic communication technique is the nurse demonstrating?",
         "options": [
-          {"label": "A", "text": "Stop the transfusion immediately"},
-          {"label": "B", "text": "Call the healthcare provider"},
-          {"label": "C", "text": "Document the reaction"},
-          {"label": "D", "text": "Slow the infusion rate"}
+            {"label": "A", "text": "Offering general leads"},
+            {"label": "B", "text": "Summarizing"},
+            {"label": "C", "text": "Focusing"},
+            {"label": "D", "text": "Restating"}
+        ],
+        "correctAnswer": "D",
+        "explanation": "Restating involves repeating the client’s statement to confirm understanding and encourage further expression.",
+        "tags": ["mental health", "therapeutic communication"]
+    },
+    {
+        "questionID": "8",
+        "stem": "A nurse is communicating with a newly admitted client. Which of the following is a barrier to therapeutic communication?",
+        "options": [
+            {"label": "A", "text": "Offering advice"},
+            {"label": "B", "text": "Reflecting meaning"},
+            {"label": "C", "text": "Listening attentively"},
+            {"label": "D", "text": "Giving information"}
         ],
         "correctAnswer": "A",
-        "explanation": "These are signs of an acute hemolytic reaction. The first action is to stop the transfusion to prevent further reaction.",
-        "tags": ["blood transfusion", "adverse reaction", "priority"]
-      },
-      {
-        "questionID": "10",
-        "stem": "A nurse is providing discharge teaching to a client prescribed warfarin. Which statement by the client indicates a need for further teaching?",
+        "explanation": "Offering advice can shut down client expression and hinder therapeutic communication.",
+        "tags": ["communication", "barriers", "nursing"]
+    },
+    {
+        "questionID": "9",
+        "stem": "A nurse is conducting therapy with several clients and their families. Effective communication with clients and families is based on:",
         "options": [
-          {"label": "A", "text": "I will use an electric razor for shaving."},
-          {"label": "B", "text": "I can take aspirin if I get a headache."},
-          {"label": "C", "text": "I will report any signs of bleeding to my provider."},
-          {"label": "D", "text": "I need to have regular blood tests to check my INR."}
+            {"label": "A", "text": "Discussing in-depth topics with which the client feels comfortable"},
+            {"label": "B", "text": "Using silence to avoid unpleasant or difficult topics"},
+            {"label": "C", "text": "Attending to verbal and nonverbal behaviors"},
+            {"label": "D", "text": "Requiring the client and family to ask for feedback"}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Effective communication includes being observant of both verbal and nonverbal cues to fully understand the client and family concerns.",
+        "tags": ["communication", "family-centered care"]
+      },
+    {
+        "questionID": "10",
+        "stem": "When a family asks a nurse for reassurance about a client's condition, which of the following is an appropriate response?",
+        "options": [
+            {"label": "A", "text": "I think your son is getting better. What have you noticed?"},
+            {"label": "B", "text": "I'm sure everything will be okay. It just takes time to heal."},
+            {"label": "C", "text": "I'm not sure what's wrong. Have you asked the doctor about your concerns?"},
+            {"label": "D", "text": "I understand you're concerned. Let's discuss what concerns you specifically."}
+        ],
+        "correctAnswer": "D",
+        "explanation": "This response validates the family’s emotions while encouraging them to voice specific concerns, fostering therapeutic communication.",
+        "tags": ["communication", "family-centered care", "reassurance"]
+    },
+    {
+        "questionID": "11",
+        "stem": "A nurse is caring for a 20-year-old client who is sexually active and has come to the college health clinic for a first-time checkup. Which of the following interventions should the nurse perform first to determine the client's need for health promotion and disease prevention?",
+        "options": [
+            {"label": "A", "text": "Measure vital signs."},
+            {"label": "B", "text": "Encourage HIV screening."},
+            {"label": "C", "text": "Determine risk factors."},
+            {"label": "D", "text": "Instruct the client to use condoms."}
+        ],
+        "correctAnswer": "C",
+        "explanation": "Determining risk factors is the priority in assessing the client’s health promotion and prevention needs.",
+        "tags": ["health promotion", "assessment", "nursing priorities"]
+    },
+    {
+        "questionID": "12",
+        "stem": "A nurse in a clinic is planning health promotion and disease prevention strategies for a client who has multiple risk factors for cardiovascular disease. Which of the following interventions should the nurse include? (Select all that apply)",
+        "options": [
+            {"label": "A", "text": "Help the client see the benefits of her actions."},
+            {"label": "B", "text": "Identify the client's support systems."},
+            {"label": "C", "text": "Suggest and recommend community resources."},
+            {"label": "D", "text": "Devise and set goals for the client."},
+            {"label": "E", "text": "Teach stress management strategies."}
+        ],
+        "correctAnswer": ["A", "B", "C", "E"],
+        "explanation": "These strategies support client engagement, use of resources, and overall wellness promotion.",
+        "tags": ["cardiovascular", "prevention", "health teaching"]
+    },
+    {
+        "questionID": "13",
+        "stem": "A nurse in a health clinic is caring for a 21-year-old client who reports a sore throat. The client tells the nurse that he has not seen a doctor since high school. Which of the following health screenings should the nurse expect the provider to perform for this client?",
+        "options": [
+            {"label": "A", "text": "Testicular examination"},
+            {"label": "B", "text": "Blood glucose"},
+            {"label": "C", "text": "Fecal occult blood"},
+            {"label": "D", "text": "Prostate-specific antigen"}
+        ],
+        "correctAnswer": "A",
+        "explanation": "Testicular cancer is more prevalent in young adult males, making this screening age-appropriate.",
+        "tags": ["preventive care", "young adults", "screening"]
+    },
+    {
+        "questionID": "14",
+        "stem": "A nurse is talking with a client who recently attended a cholesterol screening and a heart-healthy nutrition presentation. After hospitalization for chest pain, the client enrolled in cardiac rehab. Which activity is an example of primary prevention?",
+        "options": [
+            {"label": "A", "text": "Cholesterol screening"},
+            {"label": "B", "text": "Nutrition presentation"},
+            {"label": "C", "text": "Medication therapy"},
+            {"label": "D", "text": "Cardiac rehabilitation"}
         ],
         "correctAnswer": "B",
-        "explanation": "Aspirin increases the risk of bleeding when taken with warfarin. The client needs further education on medication interactions.",
-        "tags": ["anticoagulants", "client education", "med safety"]
-      },
-      {
-        "questionID": "11",
-        "stem": "A nurse is assessing a newborn 1 hour after birth. Which finding should the nurse report to the provider?",
-        "options": [
-          {"label": "A", "text": "Respiratory rate of 60/min"},
-          {"label": "B", "text": "Heart rate of 140 bpm"},
-          {"label": "C", "text": "Nasal flaring and grunting"},
-          {"label": "D", "text": "Positive Moro reflex"}
-        ],
-        "correctAnswer": "C",
-        "explanation": "Nasal flaring and grunting are signs of respiratory distress in a newborn and should be reported immediately.",
-        "tags": ["newborn", "assessment", "respiratory"]
-      },
-      {
-        "questionID": "12",
-        "stem": "A nurse is reinforcing teaching with a client who has a new diagnosis of hypertension. Which of the following client statements indicates understanding of the teaching?",
-        "options": [
-          {"label": "A", "text": "I will limit my sodium intake to 4 grams per day."},
-          {"label": "B", "text": "I will check my blood pressure only when I feel dizzy."},
-          {"label": "C", "text": "I will walk at least 30 minutes most days of the week."},
-          {"label": "D", "text": "I will stop taking my medication when my blood pressure is normal."}
-        ],
-        "correctAnswer": "C",
-        "explanation": "Regular physical activity is an effective non-pharmacological intervention for managing hypertension.",
-        "tags": ["hypertension", "client education", "lifestyle"]
-      }
-
+        "explanation": "Primary prevention aims to prevent disease onset and includes education and lifestyle promotion.",
+        "tags": ["primary prevention", "nursing", "education"]
+    }
+     
     ]
   }
   
